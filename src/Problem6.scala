@@ -1,6 +1,5 @@
-
-
 object Problem6 {
+  
   def main(args: Array[String]) {
     println(squareOfSums(10) - sumOfSquares(10));
     println(squareOfSums(100) - sumOfSquares(100));
