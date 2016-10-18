@@ -16,6 +16,6 @@ object Problem7 {
   }
 
   def sieve(xs: Stream[Int]): Stream[Int] = {
-    xs.head #:: sieve((xs.tail) filter (_ % xs.head != 0))
+    xs.head #:: sieve(xs.tail.filter(_ % xs.head != 0))
   }
 }
