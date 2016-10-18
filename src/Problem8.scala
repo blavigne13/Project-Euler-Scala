@@ -1,9 +1,11 @@
 /**
- * In a 1000-digit number, find the 13 consecutive digits with the largest product.
+ * Project Euler #8: In a 1000-digit number, find the 13 consecutive digits
+ * with the largest product.
  *
  * https://projecteuler.net/problem=8
  */
 object Problem8 {
+  
   def main(args: Array[String]) {
     val n = "73167176531330624919225119674426574742355349194934" +
       "96983520312774506326239578318016984801869478851843" +
@@ -26,10 +28,10 @@ object Problem8 {
       "05886116467109405077541002256983155200055935729725" +
       "71636269561882670428252483600823257530420752963450";
 
-    println(n.toList             // take num as a List[Char]
-      .map { _ - 48L }           // map to List[Long]
-      .sliding(13)               // take sub-lists of 13 elements
-      .map { _.reduce(_ * _) }   // map-reduce each sub-list to the product of its elements
-      .max);                     // take the largest product
+    println(n.toList           // take num as a List[Char]
+      .map { _ - 48L }         // map to List[Long]
+      .sliding(13)             // take sub-lists of 13 elements
+      .map { _.reduce(_ * _) } // map-reduce each sub-list to the product of its elements
+      .max);                   // take the largest product
   }
 }
